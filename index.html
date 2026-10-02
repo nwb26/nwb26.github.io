@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick | Rutgers Business School Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        rutgers: {
+                            DEFAULT: '#CC0033',
+                            dark: '#990026',
+                            light: '#E60039'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-300">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-xl bg-rutgers text-white font-bold flex items-center justify-center text-lg shadow-md">N</span>
+                    <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white">Nick's <span class="text-rutgers">Portfolio</span></span>
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium hover:text-rutgers transition-colors">About</a>
+                    <a href="#projects" class="text-sm font-medium hover:text-rutgers transition-colors">Projects</a>
+                    <a href="#skills" class="text-sm font-medium hover:text-rutgers transition-colors">Skills</a>
+                    <a href="mailto:nwb26@scarletmail.rutgers.edu" class="px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold transition-all shadow-md hover:shadow-lg dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100">
+                        Download Resume
+                    </a>
+                    <button id="theme-toggle" class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white focus:outline-none" aria-label="Toggle Theme">
+                        <i class="fas fa-moon text-lg dark:hidden"></i>
+                        <i class="fas fa-sun text-lg hidden dark:block"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden gap-2">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg text-slate-500 dark:text-slate-400">
+                        <i class="fas fa-moon text-lg dark:hidden"></i>
+                        <i class="fas fa-sun text-lg hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-slate-600 dark:text-slate-300">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a>
+            <a href="mailto:nwb26@scarletmail.rutgers.edu" class="block px-3 py-2 rounded-full bg-slate-900 text-white text-center text-base font-semibold dark:bg-white dark:text-slate-900">Download Resume</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Profile Section -->
+    <section id="about" class="pt-28 pb-16 md:pt-36 md:pb-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-slate-800/80 rounded-3xl p-8 md:p-12 shadow-xl border border-slate-200/80 dark:border-slate-700/60 relative overflow-hidden">
+                <!-- Background Accent Blur -->
+                <div class="absolute -top-24 -right-24 w-72 h-72 bg-rutgers/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10">
+                    <!-- Left Side Profile Card -->
+                    <div class="flex flex-col items-center text-center shrink-0 w-full md:w-64 p-6 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/60 dark:border-slate-700/50">
+                        <div class="w-36 h-36 rounded-full ring-4 ring-rutgers/20 dark:ring-rutgers/40 shadow-xl overflow-hidden bg-slate-200 dark:bg-slate-700 mb-4">
+                            <img src="Headshot.jpeg" 
+                                 alt="Nick" 
+                                 class="w-full h-full object-cover object-top"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/ffffff?text=Nick';">
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Nick</h2>
+                        <p class="text-sm font-semibold text-rutgers dark:text-red-400 mt-1">Rutgers Business School</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Class of 2028 (Expected)</p>
+                    </div>
+
+                    <!-- Right Side Hero Text -->
+                    <div class="text-center md:text-left flex-1 space-y-5">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rutgers/10 text-rutgers dark:text-red-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                                <span class="w-2 h-2 rounded-full bg-rutgers animate-pulse"></span>
+                                Currently: Exploring Majors
+                            </div>
+                            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                                Multi-disciplinary business strategy, rooted at Rutgers.
+                            </h1>
+                        </div>
+
+                        <p class="text-slate-600 dark:text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl">
+                            Undergraduate student at Rutgers Business School leveraging a diverse academic curriculum and continuous scientific research spanning circular economy systems, clean energy innovation, and business analytics.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                            <a href="mailto:nwb26@scarletmail.rutgers.edu" class="px-6 py-3 rounded-xl bg-rutgers hover:bg-rutgers-dark text-white text-sm font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                                <i class="fas fa-envelope"></i> Email Me
+                            </a>
+                            <a href="https://www.linkedin.com/in/nick-barnard-994429342" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 text-sm font-semibold transition-all flex items-center gap-2 border border-slate-200 dark:border-slate-600">
+                                <i class="fab fa-linkedin text-blue-600 dark:text-blue-400"></i> LinkedIn Profile <i class="fas fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-slate-100/60 dark:bg-slate-800/40">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Featured Projects & Scientific Research</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2">A showcase of continuous sustainability systems and hydrogen clean-energy engineering.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 flex flex-col justify-between hover:shadow-xl transition duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-rutgers bg-rutgers/10 px-3 py-1 rounded-full">
+                                Circular Economy & Sustainability Research
+                            </span>
+                            <i class="fas fa-recycle text-slate-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                            Closed-Loop Fast Food Plastic Repurposing System
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            Participating in a comprehensive research initiative developing a closed-loop system to recycle, convert, and repurpose fast food restaurant plastic waste into durable, continuously used end-products.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">Closed-Loop System</span>
+                            <span class="text-xs px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">Polymer Conversion</span>
+                            <span class="text-xs px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">Supply Chain Sustainability</span>
+                            <span class="text-xs px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">Waste Reduction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm border border-slate-200/80 dark:border-slate-700/80 flex flex-col justify-between hover:shadow-xl transition duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-rutgers bg-rutgers/10 px-3 py-1 rounded-full">
+                                Clean Energy & Applied Engineering Research
+                            </span>
+                            <i class="fas fa-charging-station text-slate-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                            Hydrogen Fuel Cell Flow Field Optimization
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                            Scientific research project designing, prototyping, and testing a custom hydrogen fuel cell. Evaluated multiple flow field geometry designs to measure mass transport efficiency and determine optimal power output.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-100 dark:border-slate-700/60">
+                            <span class="text-xs px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">Hydrogen Fuel Cells</span>
+                            <span class="text-xs px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">Flow Field Geometries</span>
+                            <span class="text-xs px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">Power Output Optimization</span>
+                            <span class="text-xs px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium">Clean Energy Tech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Technical & Analytical Skills</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2">Methodologies and competencies across science and business</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-rutgers/10 text-rutgers flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Scientific Research</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Experimental Design & Prototyping</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-rutgers/10 text-rutgers flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Business Strategy</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Market Analysis & Decision Making</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-rutgers/10 text-rutgers flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Technical Tools</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Data Analysis & Modeling Tools</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/80 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-rutgers/10 text-rutgers flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-white text-base">Circular Economy</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Clean Tech & Sustainability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-slate-900 dark:bg-slate-800 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+                <p class="text-slate-300 max-w-xl mx-auto mb-8 text-sm sm:text-base">
+                    Interested in discussing research initiatives, business analytics, or strategic collaborations? Feel free to reach out.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="mailto:nwb26@scarletmail.rutgers.edu" class="px-6 py-3 rounded-xl bg-rutgers hover:bg-rutgers-dark text-white font-semibold text-sm transition shadow-lg flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/nick-barnard-994429342" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800 dark:bg-slate-700 hover:bg-slate-700 text-white font-semibold text-sm transition flex items-center gap-2 border border-slate-700">
+                        <i class="fab fa-linkedin text-blue-400"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+        <p>&copy; 2026 Nick | Rutgers Business School Portfolio</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle Logic
+        const themeToggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
+        
+        // System preference check
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        themeToggleBtns.forEach(btn => {
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                });
+            }
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
